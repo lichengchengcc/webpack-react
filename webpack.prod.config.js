@@ -13,6 +13,9 @@ module.exports = {
   },
   // devtool: 'source-map',
   // 将错误信息 展示到源代码中 不再bundle中
+  resolve:{
+    extensions:[".js",".json",".jsx"]
+  },
   module: {
     rules: [
      {
@@ -21,7 +24,7 @@ module.exports = {
        use: {
          loader: 'babel-loader',
          options: {
-           presets: ['babel-preset-env','babel-preset-react']
+           presets: ['env','react','stage-0']
          }
        }
      },
